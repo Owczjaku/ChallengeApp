@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/ChallangeApp/ChallangeApp.sln
+/ChallangeApp/ChallangeApp/Program.cs
+/ChallangeApp/ChallangeApp/ChallangeApp.csproj
+/ChallangeApp/ChallangeApp/Program.cs
+/ChallangeApp/ChallangeApp/Program.cs
+/ChallangeApp/ChallangeApp.sln
+/ChallangeApp/ChallangeApp/ChallangeApp.csproj
+/ChallangeApp/ChallangeApp/ChallangeApp.csproj
+/ChallangeApp/ChallangeApp/ChallangeApp.csproj
+/ChallangeApp/ChallangeApp/ChallangeApp.csproj
+/.gitignore

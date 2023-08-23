@@ -27,17 +27,17 @@ foreach (char letter in letters)
 
     else if (letter == '2')
     {
-        counter2++; 
+        counter2++;
     }
 
     else if (letter == '3')
     {
-        counter3++;  
+        counter3++;
     }
 
     else if (letter == '4')
     {
-        counter4++;   
+        counter4++;
     }
 
     else if (letter == '5')
@@ -69,5 +69,5 @@ Console.WriteLine("4 =>" + counter4++);
 Console.WriteLine("5 =>" + counter5++);
 Console.WriteLine("6 =>" + counter6++);
 Console.WriteLine("7 =>" + counter7++);
-Console.WriteLine("8 =>" + counter8++); 
-Console.WriteLine("9 =>" + counter9++); 
+Console.WriteLine("8 =>" + counter8++);
+Console.WriteLine("9 =>" + counter9++);
