@@ -43,7 +43,7 @@ namespace ChallengeApp.Tests
         Assert.AreEqual(-1, result);
             }
 
-            Employee employee3 = new Employee("Pawe³", "Przyby³", 33);
+            
 
     }
 }
