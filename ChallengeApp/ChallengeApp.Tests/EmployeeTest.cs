@@ -1,49 +1,69 @@
-using System.Reflection.Metadata;
+ï»¿using ChallengeApp;
 
 namespace ChallengeApp.Tests
 {
-    public class Tests
+    public class EmployeeTest
     {
-
         [Test]
-        public void WhenUserCollectTwoPoints_ShouldReuturnCoorrectResult()
+        public void MinGradeTest()
         {
-            var employee = new Employee("Jakub", "Rak", 41);
-            employee.AddScore(3);
-            employee.AddScore(7);
+            // arrange
+            var employee = new Employee("Jakub", "Rak");
+            employee.AddGrade(4);
+            employee.AddGrade(5);
+            employee.AddGrade(1);
+            employee.AddGrade(9);
 
-            var result = employee.Result;
 
-            Assert.AreEqual(10, result);
+
+            // act
+            var result = employee.GetStatistics();
+
+            // assert
+            Assert.AreEqual(1, result.Min);
+
+
+
+
         }
 
         [Test]
-        public void WhenUserCollectTwoNegativePoints_ShouldReuturnCoorrectResult()
+        public void MaxGradeTest()
         {
-            var employee = new Employee("Pawe³", "Przyby³", 33);
-            employee.AddScore(-1);
-            employee.AddScore(-5);
+            // arrange
+            var employee = new Employee("Alicja", "Polak");
+            employee.AddGrade(2);
+            employee.AddGrade(7);
+            employee.AddGrade(8);
+            employee.AddGrade(4);
 
-            var result = employee.Result;
+            // act
+            var result = employee.GetStatistics();
 
-            Assert.AreEqual(-6, result);
+            // assert
+            Assert.AreEqual(8, result.Max);
 
         }
 
         [Test]
+        public void AverageGradeTest()
+        {
+            // arrange
+            var employee = new Employee("Jan", "Nowak");
+            employee.AddGrade(6);
+            employee.AddGrade(6);
+            employee.AddGrade(3);
+            employee.AddGrade(3);
 
-        public void WhenUserCollectNegativeAndPostiviePoints_ShouldReuturnCoorrectResult()
-        { 
-              var employee = new Employee("Joanna", "Nowak", 27);
-              employee.AddScore(-3);
-              employee.AddScore(2);
 
-            var result = employee.Result;
 
-        Assert.AreEqual(-1, result);
-            }
+            // act
+            var result = employee.GetStatistics();
 
-            
+            // assert
+            Assert.AreEqual(4.5, result.Average);
+        }
 
     }
+
 }

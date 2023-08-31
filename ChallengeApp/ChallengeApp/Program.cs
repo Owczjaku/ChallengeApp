@@ -1,48 +1,59 @@
-﻿using ChallengeApp;
-
-Employee employee1 = new Employee("Jakub", "Rak", 41 );
-Employee employee2 = new Employee("Joanna", "Nowak", 27);
-Employee employee3 = new Employee("Paweł", "Przybył", 33);
-
-
-employee1.AddScore(4);
-employee1.AddScore(7);
-employee1.AddScore(5);
-employee1.AddScore(1);
-employee1.AddScore(9);
+﻿
+using ChallengeApp;
+{ 
+var employee = new Employee("Jakub", "Rak");
+employee.AddGrade(4);
+employee.AddGrade(5);
+employee.AddGrade(1);
+employee.AddGrade(9);
 
 
-employee2.AddScore(2);
-employee2.AddScore(7);
-employee2.AddScore(4);
-employee2.AddScore(5);
-employee2.AddScore(3);
+var statistics = employee.GetStatistics();
+
+Console.WriteLine($"Min:  + {statistics.Min}");
 
 
-employee3.AddScore(3);
-employee3.AddScore(9);
-employee3.AddScore(6);
-employee3.AddScore(5);
-employee3.AddScore(3);
 
-List<Employee> employees = new List<Employee>()
+void SetSth(Statistics statistics)
 {
-
-    employee1, employee2, employee3
-
-};
-
-int maxResult = -1;
-Employee employeeWithMaxResult = null;
-
-foreach(var employee in employees)
-{
-
-    if(employee.Result > maxResult)
-    {
-        employeeWithMaxResult = employee;
-
-    }    
+    statistics = new Statistics();  
 }
 
-Console.WriteLine("Pracownikem z najwyższym wynikiem jest: " + employeeWithMaxResult.Name + " " + employeeWithMaxResult.Surname + ", wiek: " + employeeWithMaxResult.Age + ", punkty: " + employeeWithMaxResult.Result);
+}
+
+{ 
+var employee = new Employee("Alicja", "Polak");
+employee.AddGrade(2);
+employee.AddGrade(7);
+employee.AddGrade(8);
+employee.AddGrade(4);
+
+
+var statistics = employee.GetStatistics();
+
+Console.WriteLine($"Max:  + {statistics.Max}");
+
+void SetSth2(Statistics statistics)
+    { 
+    statistics = new Statistics();
+    }
+}
+
+{ 
+
+var employee = new Employee("Jan", "Nowak");
+employee.AddGrade(6);
+employee.AddGrade(6);
+employee.AddGrade(3);
+employee.AddGrade(3);
+
+var statistics = employee.GetStatistics();
+
+Console.WriteLine($"Average:  + {statistics.Average}");
+
+void SetSth3(Statistics statistics)
+{
+    statistics = new Statistics();
+}
+
+}
